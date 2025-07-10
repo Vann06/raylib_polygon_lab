@@ -57,9 +57,7 @@ pub fn draw_poligon(framebuffer: &mut Framebuffer, points: &[Vector2]){
 
 // Rellenar un poligono
 pub fn fill_poligon(framebuffer: &mut Framebuffer, points: &[Vector2]) {
-    if points.len() <= 4 {
-        return; 
-    }
+
     let mut y_min = f32::MAX;
     let mut y_max = f32::MIN;
 
