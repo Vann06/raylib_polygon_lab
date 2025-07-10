@@ -31,6 +31,6 @@ fn main() {
     framebuffer.set_current_color(Color::WHITE); 
     draw_poligon(&mut framebuffer, &polygon_2);
 
-    framebuffer.render_to_file("out.png");
+    framebuffer.render_to_file("out.bmp");
     println!("Poligono 2 dibujado!");
 }
