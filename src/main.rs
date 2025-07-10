@@ -32,6 +32,6 @@ fn main() {
     
 
 
-    framebuffer.render_to_file("out.bmp");
+    framebuffer.render_to_file("out.png");
     println!("Poligono 1 dibujado!");
 }
