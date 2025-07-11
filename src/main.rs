@@ -17,7 +17,7 @@ fn main() {
     framebuffer.set_background_color(Color { r: 50, g: 50, b: 100, a: 255 });
     framebuffer.clear();
 
-    
+
     // Poligono 1
     let polygon_1: Vec<Vector2> = vec![
         (165, 380), (185, 360), (180, 330), (207, 345), (233, 330), (230, 360), (250, 380), (220, 385), (205, 410), (193, 383)
@@ -36,18 +36,24 @@ fn main() {
     let polygon_2: Vec<Vector2> = vec![
         (321, 335), (288, 286), (339, 251), (374, 302)
     ]
+    // Poligono 3
+    let polygon_3: Vec<Vector2> = vec![
+        (377, 249), (411, 197), (436, 249)
+
+    ]
     .into_iter()
     .map(|(x, y)| Vector2::new(x as f32, y as f32))
     .collect();
 
-    framebuffer.set_current_color(Color::BLUE);
-    fill_poligon(&mut framebuffer, &polygon_2);
+    framebuffer.set_current_color(Color::RED); 
+    fill_poligon(&mut framebuffer, &polygon_3);
 
     framebuffer.set_current_color(Color::WHITE); 
-    draw_poligon(&mut framebuffer, &polygon_2);
+    draw_poligon(&mut framebuffer, &polygon_3);
 
 
     framebuffer.render_to_file("out.png");
     framebuffer.render_to_file("out.bmp");
-    println!("Poligono 1 y 2 dibujado!");
+    println!("Poligono 1,2, 3 dibujado!");
+
 }
